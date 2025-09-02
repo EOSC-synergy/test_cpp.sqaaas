@@ -1,0 +1,16 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+sqa_criteria:
+  QC.Uni:
+    repos:
+      this_repo:
+        commands:
+        - ./build/test_point
+        container: qc.uni_tacky-alizarin-bat
+timeout: 5400
